@@ -8,7 +8,7 @@ public class SalesRepresentative {
     private int quota;
     private int revenue = quota * numberOfSales;
 
-    public SalesRepresentative(String firstName, String lastName,int numberOfSales, int quota, int revenue) {
+    public SalesRepresentative(String firstName, String lastName, int numberOfSales, int quota, int revenue) {
         super();
         this.firstName = firstName;
         this.lastName = lastName;
@@ -49,10 +49,10 @@ public class SalesRepresentative {
         this.quota = quota;
     }
 
-    public int getRevenue (){
+    public int getRevenue() {
         return revenue;
     }
-    
+
     public void setRevenue(int revenue) {
 
         this.revenue = this.quota * this.numberOfSales;
