@@ -4,22 +4,19 @@ public class BubbleSortReps {
 
     public SalesRepresentative[] sortSalesRepresentatives(SalesRepresentative[] unsortedReps) {
 
-        SalesRepresentative reps[] = new SalesRepresentative[3];
-        int swap = 0;
-        do {
-            for (int i = 0; i < reps.length - 1; i++) {
-                int revenue = reps[i].getRevenue();
-                int revp = reps[i + 1].getRevenue();
-                if (revenue > revp) {
-                    SalesRepresentative temp = reps[i];
-                    reps[i] = reps[i + 1];
-                    reps[i + 1] = temp;
-                    swap++;
-                    System.out.println(temp);
+        SalesRepresentative reps = new SalesRepresentative(unsortedReps);
+
+        //Writing the BubbleSort algorithm
+        for (int i = 0; i < unsortedReps.length; i++) {
+            for (int j = 1; j < unsortedReps.length - 1; j++) {
+                if (unsortedReps[j].getRevenue() < unsortedReps[j + 1].getRevenue()) {
+                    SalesRepresentative uns = unsortedReps[j];
+                    unsortedReps[j] = unsortedReps[j + 1];
+                    unsortedReps[j + 1] = uns;
                 }
             }
-        } while (swap > 0);
-        return reps;
+        }
+        return unsortedReps;
     }
 }
 

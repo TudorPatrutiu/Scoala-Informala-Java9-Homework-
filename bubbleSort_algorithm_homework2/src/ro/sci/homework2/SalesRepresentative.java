@@ -1,7 +1,7 @@
 package ro.sci.homework2;
 
 public class SalesRepresentative {
-
+    //Declaring the needed variables
     private String firstName;
     private String lastName;
     private int numberOfSales;
@@ -17,6 +17,18 @@ public class SalesRepresentative {
         this.revenue = revenue;
     }
 
+    public SalesRepresentative(SalesRepresentative[] unsortedReps) {
+
+    }
+
+    @Override
+    public String toString() {
+        return
+                firstName + '\'' + " " + lastName + '\'' + " " + numberOfSales + " " + quota + " " + revenue + "\n";
+    }
+
+
+    //Generated getters and setters
     public String getFirstName() {
         return firstName;
     }
